@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 import { motion } from 'framer-motion';
 import { useScrollPosition } from '../../hooks/useScrollPosition';
 import { cn } from '../../lib/utils';
+import { Scale } from 'lucide-react';
 
 export const Header = () => {
     const scrollPosition = useScrollPosition();
@@ -92,8 +93,8 @@ export const Header = () => {
                         )}
                     >
                         <div className="flex items-center gap-2">
-                            <div className="w-10 h-10 bg-[#eaa636] rounded-full flex items-center justify-center">
-                                <span className="text-white font-bold text-sm">⚖️</span>
+                            <div className="w-10 h-10 flex items-center justify-center">
+                                <span className="text-white font-bold text-sm"><Scale size={20} /></span>
                             </div>
                             <span className="hidden lg:inline">Flints Legal Solutions</span>
                         </div>

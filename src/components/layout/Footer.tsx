@@ -7,6 +7,7 @@ import {
 import { Input } from '../ui/input';
 import { Button } from '../ui/button';
 import { Label } from '../ui/label';
+import { Scale } from 'lucide-react';
 
 export const Footer = () => {
     const {
@@ -33,8 +34,10 @@ export const Footer = () => {
                     {/* Logo and Contact Info */}
                     <div>
                         <div className="flex items-center gap-2 mb-4">
-                            <div className="w-12 h-12 bg-[#eaa636] rounded-full flex items-center justify-center">
-                                <span className="text-white font-bold text-lg">⚖️</span>
+                            <div className="w-fit flex items-center justify-center gap-2">
+                                <span className="text-white font-bold text-lg"><Scale size={20} />
+                                    <span className="text-white font-bold text-lg md:text-2xl">Flints Legal Solutions</span>
+                                </span>
                             </div>
                         </div>
                         <div className="space-y-3 text-gray-300 text-sm">
