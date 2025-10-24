@@ -94,7 +94,9 @@ export const Header = () => {
                     >
                         <div className="flex items-center gap-2">
                             <div className="w-10 h-10 flex items-center justify-center">
-                                <span className="text-white font-bold text-sm"><Scale size={20} /></span>
+                                <span className="text-white font-bold text-sm">
+                                    {isScrolled ? <Scale size={20} className='text-gray-900' /> : <Scale size={20} className='text-white' />}
+                                </span>
                             </div>
                             <span className="hidden lg:inline">Flints Legal Solutions</span>
                         </div>
