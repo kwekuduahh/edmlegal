@@ -1,85 +1,105 @@
 import { motion } from "framer-motion";
-import { Card, CardContent, CardDescription, CardTitle } from "../components/ui/card";
 import { practiceAreas } from "../data/practiceAreas";
+import { Hammer, Stethoscope, HardHat, Gavel, Users, Briefcase } from 'lucide-react';
+import { Button } from "../components/ui/button";
+import { Link } from "react-router";
+
+const iconMap: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
+    'Hammer': Hammer,
+    'Stethoscope': Stethoscope,
+    'HardHat': HardHat,
+    'Gavel': Gavel,
+    'Users': Users,
+    'Briefcase': Briefcase,
+};
 
 export default function PracticeAreas() {
     return (
-        <div className="pt-20">
+        <div>
             {/* Hero Section */}
-            <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white py-20">
-                <div className="container mx-auto px-4">
+            <section className="relative bg-cover bg-center bg-no-repeat text-white py-32 overflow-hidden" style={{ backgroundImage: 'url(/pexels-pavel-danilyuk-8111865.jpg)' }}>
+                <div className="absolute inset-0 bg-orange-500/20 z-10"></div>
+                <div className="relative container mx-auto px-4 z-20">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
-                        className="text-center max-w-3xl mx-auto"
+                        className="text-center max-w-4xl mx-auto"
                     >
-                        <h1 className="text-4xl md:text-5xl font-bold mb-6">Practice Areas</h1>
-                        <p className="text-xl text-blue-100">
-                            Comprehensive legal services across multiple practice areas
+                        <h1 className="text-xl md:text-2xl lg:text-3xl font-bold mb-4">Practice Areas</h1>
+                        <hr className="w-40 mx-auto border-t-2 border-[#eaa636] mb-4" />
+                        <p className="text-sm md:text-base lg:text-lg text-gray-300 font-light">
+                            Reputation. Respect. Result.
                         </p>
                     </motion.div>
                 </div>
             </section>
 
-            {/* Practice Areas Grid */}
+            {/* Practice Areas Grid with Hover Animation */}
             <section className="py-20 bg-white">
                 <div className="container mx-auto px-4">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                        {practiceAreas.map((area, index) => (
-                            <motion.div
-                                key={area.id}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.5, delay: index * 0.1 }}
-                                whileHover={{ scale: 1.02 }}
-                            >
-                                <Card className="h-full hover:shadow-xl transition-shadow duration-300">
-                                    <CardContent className="p-8">
-                                        <CardTitle className="text-2xl mb-4">{area.title}</CardTitle>
-                                        <CardDescription className="text-gray-600 text-base leading-relaxed">
-                                            {area.description}
-                                        </CardDescription>
-                                    </CardContent>
-                                </Card>
-                            </motion.div>
-                        ))}
+                    <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3  max-w-7xl mx-auto">
+                        {practiceAreas.map((area, index) => {
+                            const IconComponent = area.icon ? iconMap[area.icon] : null;
+
+                            return (
+                                <motion.div
+                                    key={area.id}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                                    className="relative h-[350px] overflow-hidden group cursor-pointer"
+                                    style={{
+                                        backgroundImage: `url(${area.image})`,
+                                        backgroundSize: 'cover',
+                                        backgroundPosition: 'center',
+                                    }}
+                                >
+                                    {/* Dark overlay */}
+                                    <div className="absolute inset-0 bg-black/60 group-hover:bg-black/70 transition-all duration-300"></div>
+
+                                    {/* Content Container */}
+                                    <div className="absolute inset-0 flex flex-col justify-end p-8 text-white transition-transform duration-300 group-hover:-translate-y-16">
+                                        {/* Icon and Title - Always Visible */}
+                                        <div className="flex items-center gap-3 mb-4">
+                                            {IconComponent && (
+                                                <div className="w-12 h-12 bg-[#eaa636] rounded-full flex items-center justify-center flex-shrink-0">
+                                                    <IconComponent size={24} />
+                                                </div>
+                                            )}
+                                            <h3 className="text-xl md:text-2xl font-bold">{area.title}</h3>
+                                        </div>
+
+                                        {/* Description - Hidden by default, revealed on hover */}
+                                        <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 max-h-0 group-hover:max-h-32 overflow-hidden">
+                                            <p className="text-gray-200 text-sm leading-relaxed">
+                                                {area.description}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </motion.div>
+                            );
+                        })}
                     </div>
                 </div>
             </section>
 
-            {/* Additional Practice Areas */}
-            <section className="py-20 bg-gray-50">
+            {/* CTA Section */}
+            <section className="bg-[#eaa636] py-12">
                 <div className="container mx-auto px-4">
-                    <div className="max-w-4xl mx-auto">
-                        <h2 className="text-3xl font-bold mb-8 text-center">Additional Services</h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div className="bg-white p-6 rounded-lg shadow-sm">
-                                <h3 className="text-xl font-semibold mb-3">Corporate and M&A</h3>
-                                <p className="text-gray-600">
-                                    Expert guidance through complex mergers, acquisitions, and corporate restructuring.
-                                </p>
-                            </div>
-                            <div className="bg-white p-6 rounded-lg shadow-sm">
-                                <h3 className="text-xl font-semibold mb-3">Construction and Real Estate</h3>
-                                <p className="text-gray-600">
-                                    Comprehensive legal support for construction projects and real estate transactions.
-                                </p>
-                            </div>
-                            <div className="bg-white p-6 rounded-lg shadow-sm">
-                                <h3 className="text-xl font-semibold mb-3">Commercial Dispute Resolution</h3>
-                                <p className="text-gray-600">
-                                    Strategic representation in business disputes and commercial litigation.
-                                </p>
-                            </div>
-                            <div className="bg-white p-6 rounded-lg shadow-sm">
-                                <h3 className="text-xl font-semibold mb-3">Banking and Finance</h3>
-                                <p className="text-gray-600">
-                                    Legal counsel for banking transactions, financing, and regulatory compliance.
-                                </p>
-                            </div>
-                        </div>
+                    <div className="flex flex-col md:flex-row items-center justify-between gap-6 max-w-6xl mx-auto">
+                        <h2 className="text-2xl md:text-3xl font-bold text-white text-center md:text-left">
+                            Contact Us Now! Get a Free Consultation for Your Case.
+                        </h2>
+                        <Link to="/contact">
+                            <Button
+                                size="lg"
+                                className="bg-black text-white hover:bg-gray-900 px-8 py-6 text-base font-semibold whitespace-nowrap"
+                            >
+                                MAKE APPOINTMENT
+                            </Button>
+                        </Link>
                     </div>
                 </div>
             </section>

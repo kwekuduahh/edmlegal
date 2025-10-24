@@ -46,23 +46,25 @@ export default function Contact() {
     };
 
     return (
-        <div className="pt-20">
+        <div>
             {/* Hero Section */}
-            <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white py-20">
-                <div className="container mx-auto px-4">
+            <section className="relative bg-cover bg-center bg-no-repeat text-white py-32 overflow-hidden" style={{ backgroundImage: 'url(/pexels-august-de-richelieu-4427627.jpg)' }}>
+                <div className="absolute inset-0 bg-orange-500/20 z-10"></div>
+                <div className="relative container mx-auto px-4 z-20">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
-                        className="text-center max-w-3xl mx-auto"
+                        className="text-center max-w-4xl mx-auto"
                     >
-                        <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
+                        <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>                        <hr className="w-40 mx-auto border-t-2 border-[#eaa636] mb-4" />
                         <p className="text-xl text-blue-100">
                             Get in touch with our legal experts today
                         </p>
                     </motion.div>
                 </div>
             </section>
+
 
             {/* Contact Information */}
             <section className="py-12 bg-gray-50">
@@ -110,7 +112,7 @@ export default function Contact() {
                 <div className="container mx-auto px-4">
                     <div className="max-w-3xl mx-auto">
                         <Tabs defaultValue="appointment" className="w-full">
-                            <TabsList className="grid w-full grid-cols-2 mb-8">
+                            <TabsList className="grid w-full h-fit grid-cols-2 mb-8">
                                 <TabsTrigger value="appointment">Book Appointment</TabsTrigger>
                                 <TabsTrigger value="contact">Send Message</TabsTrigger>
                             </TabsList>

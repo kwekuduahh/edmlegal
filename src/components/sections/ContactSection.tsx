@@ -17,7 +17,7 @@ export const ContactSection = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                     transition={{ duration: 0.6 }}
-                    className=" flex items-center justify-between"
+                    className=" flex flex-col md:flex-row md:text-left text-center items-center justify-between"
                 >
                     <h2 className="text-xl md:text-2xl font-bold mb-8 text-white m-0">
                         Contact Us Now! Get a Free Consultation for Your Case.

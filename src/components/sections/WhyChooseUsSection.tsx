@@ -34,7 +34,7 @@ const StatCounter = ({
 
 export const WhyChooseUsSection = () => {
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, amount: 0.2 });
+    const isInView = useInView(ref, { once: true, amount: 0.1 });
     const imageContainerRef = useRef(null);
 
     // Track scroll progress of the image container
@@ -45,7 +45,7 @@ export const WhyChooseUsSection = () => {
 
     // Transform values based on scroll
     const scale = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1.1, 1.2]);
-    const y = useTransform(scrollYProgress, [0, 1], ["-20%", "20%"]);
+    const y = useTransform(scrollYProgress, [0, 1], ["-5%", "5%"]);
 
     return (
         <>
