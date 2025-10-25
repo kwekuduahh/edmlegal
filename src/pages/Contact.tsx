@@ -97,8 +97,8 @@ export default function Contact() {
                                 <div className="mb-3 text-3xl">✉️</div>
                                 <CardTitle className="mb-2 text-lg">Email</CardTitle>
                                 <CardDescription>
-                                    <a href="mailto:info@flintslegalsolutions.com" className="hover:text-primary">
-                                        info@flintslegalsolutions.com
+                                    <a href="mailto:stancillegal@gmail.com" className="hover:text-primary">
+                                        stancillegal@gmail.com
                                     </a>
                                 </CardDescription>
                             </CardContent>

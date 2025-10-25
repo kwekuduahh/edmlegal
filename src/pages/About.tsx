@@ -41,7 +41,7 @@ export default function About() {
                                 Your partner for legal
                             </h2>
                             <p className="text-gray-700 leading-relaxed text-lg mb-6">
-                                At Flints Legal Solutions, we're more than legal advisors—we're your partners in navigating the complex world of law. With a deep commitment to excellence, integrity, and personalized service, we stand by your side, providing expert guidance tailored to your unique needs. Whether you're an individual, a business, or an organization, trust us to be your unwavering advocate. Let's build a stronger legal future together.
+                                At Stancil Legal Solutions, we're more than legal advisors—we're your partners in navigating the complex world of law. With a deep commitment to excellence, integrity, and personalized service, we stand by your side, providing expert guidance tailored to your unique needs. Whether you're an individual, a business, or an organization, trust us to be your unwavering advocate. Let's build a stronger legal future together.
                             </p>
                         </motion.div>
 
@@ -121,7 +121,7 @@ export default function About() {
                                 WELCOME
                             </p>
                             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                                Flints Legal Solutions is Your Best Partner for Legal Solutions
+                                Stancil Legal Solutions is Your Best Partner for Legal Solutions
                             </h2>
                             <p className="text-gray-300 leading-relaxed text-lg">
                                 We take pride in the depth and breadth of experience that our team of lawyers brings to the table. With years of dedicated practice in various areas of law, our attorneys have honed their skills, developed specialized knowledge, and earned a reputation for excellence in their respective fields.

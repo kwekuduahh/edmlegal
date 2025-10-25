@@ -4,7 +4,7 @@ export default function Attorneys() {
     const attorneys = [
         {
             id: "1",
-            name: "Calvern Lenis Flints",
+            name: "Calvern Lenis Stancil",
             position: "Senior Attorney",
             image: "/attorney-calvern.jpg",
         },
@@ -132,7 +132,7 @@ export default function Attorneys() {
                                 WELCOME
                             </p>
                             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                                Flints Legal Solutions is Your Best Partner for Legal Solutions
+                                Stancil Legal Solutions is Your Best Partner for Legal Solutions
                             </h2>
                             <p className="text-gray-300 leading-relaxed text-lg">
                                 We take pride in the depth and breadth of experience that our team of lawyers brings to the table. With years of dedicated practice in various areas of law, our attorneys have honed their skills, developed specialized knowledge, and earned a reputation for excellence in their respective fields.

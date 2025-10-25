@@ -36,7 +36,7 @@ export const Footer = () => {
                         <div className="flex items-center gap-2 mb-4">
                             <div className="flex items-center justify-center gap-2 w-fit">
                                 <span className="text-lg font-bold text-white"><Scale size={20} />
-                                    <span className="text-lg font-bold text-white md:text-2xl">Flints Legal Solutions</span>
+                                    <span className="text-lg font-bold text-white md:text-2xl">Stancil Legal Solutions</span>
                                 </span>
                             </div>
                         </div>
@@ -59,19 +59,10 @@ export const Footer = () => {
                             <p className="flex items-center gap-2">
                                 <span>✉️</span>
                                 <a
-                                    href="mailto:info@flintslegalsolutions.com"
-                                    className="hover:text-[#eaa636] transition-colors"
-                                >
-                                    info@flintslegalsolutions.com
-                                </a>
-                            </p>
-                            <p className="flex items-center gap-2">
-                                <span>✉️</span>
-                                <a
                                     href="mailto:brineyknightburg@gmail.com"
                                     className="hover:text-[#eaa636] transition-colors"
                                 >
-                                    brineyknightburg@gmail.com
+                                    stancillegal@gmail.com
                                 </a>
                             </p>
                             <button className="text-[#eaa636] hover:text-[#eaa636]/80 transition-colors text-sm font-semibold">
@@ -178,7 +169,7 @@ export const Footer = () => {
 
                 {/* Copyright */}
                 <div className="pt-6 text-sm text-center text-gray-400 border-t border-gray-800">
-                    <p>© Copyright 2025 - Flints Legal Solutions</p>
+                    <p>© Copyright 2025 - Stancil Legal Solutions</p>
                 </div>
             </div>
         </footer>
