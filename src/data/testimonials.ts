@@ -51,7 +51,7 @@ export const testimonials: Testimonial[] = [
 	},
 	{
 		id: '7',
-		title: 'Reliable lawyer',
+		title: 'Reliable lawyers',
 		name: 'Michael B.',
 		role: 'Employment Law Client',
 		content:

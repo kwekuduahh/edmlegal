@@ -3,8 +3,12 @@ import { PracticeAreasSection } from "../components/sections/PracticeAreasSectio
 import { WhyChooseUsSection } from "../components/sections/WhyChooseUsSection";
 import { TestimonialsSection } from "../components/sections/TestimonialsSection";
 import { ContactSection } from "../components/sections/ContactSection";
+import { useEffect } from "react";
 
 export default function Home() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <div>
             <HeroSection />

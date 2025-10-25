@@ -3,6 +3,7 @@ import { practiceAreas } from "../data/practiceAreas";
 import { Hammer, Stethoscope, HardHat, Gavel, Users, Briefcase } from 'lucide-react';
 import { Button } from "../components/ui/button";
 import { Link } from "react-router";
+import { useEffect } from "react";
 
 const iconMap: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
     'Hammer': Hammer,
@@ -14,21 +15,24 @@ const iconMap: Record<string, React.ComponentType<{ size?: number; className?: s
 };
 
 export default function PracticeAreas() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <div>
             {/* Hero Section */}
-            <section className="relative bg-cover bg-center bg-no-repeat text-white py-32 overflow-hidden" style={{ backgroundImage: 'url(/pexels-pavel-danilyuk-8111865.jpg)' }}>
-                <div className="absolute inset-0 bg-orange-500/20 z-10"></div>
-                <div className="relative container mx-auto px-4 z-20">
+            <section className="relative py-32 overflow-hidden text-white bg-center bg-no-repeat bg-cover" style={{ backgroundImage: 'url(/pexels-pavel-danilyuk-8111865.jpg)' }}>
+                <div className="absolute inset-0 z-10 bg-orange-500/20"></div>
+                <div className="container relative z-20 px-4 mx-auto">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
-                        className="text-center max-w-4xl mx-auto"
+                        className="max-w-4xl mx-auto text-center"
                     >
-                        <h1 className="text-xl md:text-2xl lg:text-3xl font-bold mb-4">Practice Areas</h1>
+                        <h1 className="mb-4 text-xl font-bold md:text-2xl lg:text-3xl">Practice Areas</h1>
                         <hr className="w-40 mx-auto border-t-2 border-[#eaa636] mb-4" />
-                        <p className="text-sm md:text-base lg:text-lg text-gray-300 font-light">
+                        <p className="text-sm font-light text-gray-300 md:text-base lg:text-lg">
                             Reputation. Respect. Result.
                         </p>
                     </motion.div>
@@ -37,8 +41,8 @@ export default function PracticeAreas() {
 
             {/* Practice Areas Grid with Hover Animation */}
             <section className="py-20 bg-white">
-                <div className="container mx-auto px-4">
-                    <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3  max-w-7xl mx-auto">
+                <div className="container px-4 mx-auto">
+                    <div className="grid grid-cols-1 gap-4 mx-auto md:grid-cols-2 lg:grid-cols-3 max-w-7xl">
                         {practiceAreas.map((area, index) => {
                             const IconComponent = area.icon ? iconMap[area.icon] : null;
 
@@ -57,7 +61,7 @@ export default function PracticeAreas() {
                                     }}
                                 >
                                     {/* Dark overlay */}
-                                    <div className="absolute inset-0 bg-black/60 group-hover:bg-black/70 transition-all duration-300"></div>
+                                    <div className="absolute inset-0 transition-all duration-300 bg-black/60 group-hover:bg-black/70"></div>
 
                                     {/* Content Container */}
                                     <div className="absolute inset-0 flex flex-col justify-end p-8 text-white transition-transform duration-300 group-hover:-translate-y-16">
@@ -68,12 +72,12 @@ export default function PracticeAreas() {
                                                     <IconComponent size={24} />
                                                 </div>
                                             )}
-                                            <h3 className="text-xl md:text-2xl font-bold">{area.title}</h3>
+                                            <h3 className="text-xl font-bold md:text-2xl">{area.title}</h3>
                                         </div>
 
                                         {/* Description - Hidden by default, revealed on hover */}
-                                        <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 max-h-0 group-hover:max-h-32 overflow-hidden">
-                                            <p className="text-gray-200 text-sm leading-relaxed">
+                                        <div className="overflow-hidden transition-opacity duration-300 opacity-0 group-hover:opacity-100 max-h-0 group-hover:max-h-32">
+                                            <p className="text-sm leading-relaxed text-gray-200">
                                                 {area.description}
                                             </p>
                                         </div>
@@ -87,15 +91,15 @@ export default function PracticeAreas() {
 
             {/* CTA Section */}
             <section className="bg-[#eaa636] py-12">
-                <div className="container mx-auto px-4">
-                    <div className="flex flex-col md:flex-row items-center justify-between gap-6 max-w-6xl mx-auto">
-                        <h2 className="text-2xl md:text-3xl font-bold text-white text-center md:text-left">
+                <div className="container px-4 mx-auto">
+                    <div className="flex flex-col items-center justify-between max-w-6xl gap-6 mx-auto md:flex-row">
+                        <h2 className="text-2xl font-bold text-center text-white md:text-3xl md:text-left">
                             Contact Us Now! Get a Free Consultation for Your Case.
                         </h2>
                         <Link to="/contact">
                             <Button
                                 size="lg"
-                                className="bg-black text-white hover:bg-gray-900 px-8 py-6 text-base font-semibold whitespace-nowrap"
+                                className="px-8 py-6 text-base font-semibold text-white bg-black hover:bg-gray-900 whitespace-nowrap"
                             >
                                 MAKE APPOINTMENT
                             </Button>

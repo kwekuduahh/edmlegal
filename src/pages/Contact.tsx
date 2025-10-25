@@ -9,8 +9,12 @@ import { Button } from "../components/ui/button";
 import { Label } from "../components/ui/label";
 import { Card, CardContent, CardDescription, CardTitle } from "../components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../components/ui/tabs";
+import { useEffect } from "react";
 
 export default function Contact() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     const {
         register: registerAppointment,
         handleSubmit: handleAppointmentSubmit,

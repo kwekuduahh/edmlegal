@@ -6,7 +6,7 @@ export const practiceAreas: PracticeArea[] = [
 		title: 'Labor',
 		description:
 			'Navigating employment regulations can be complex. Our experienced team ensures fair treatment and advocates for your rights at work.',
-		image: '/practice-labor.jpg',
+		image: '/pexels-jimbear-2310483.jpg',
 		icon: 'Hammer',
 	},
 	{
@@ -14,7 +14,7 @@ export const practiceAreas: PracticeArea[] = [
 		title: 'Medical & Health Care',
 		description:
 			"Our dedicated team understands the intricacies of healthcare law. From medical malpractice to patient rights, we're here to safeguard your health and advocate for your well-being.",
-		image: '/practice-medical.jpg',
+		image: '/pexels-funkcines-terapijos-centras-927573878-20860586.jpg',
 		icon: 'Stethoscope',
 	},
 	{
@@ -22,7 +22,7 @@ export const practiceAreas: PracticeArea[] = [
 		title: 'Mining',
 		description:
 			"From mineral rights to environmental compliance, our team digs deep to navigate the complexities of mining law. Whether you're a mining company or an individual stakeholder, count on us to be your legal compass in this dynamic field.",
-		image: '/practice-mining.jpg',
+		image: '/pexels-tomfisk-2101140.jpg',
 		icon: 'HardHat',
 	},
 	{
@@ -30,7 +30,7 @@ export const practiceAreas: PracticeArea[] = [
 		title: 'Civil & Criminal',
 		description:
 			'In the intricate dance of legal systems, we champion your rights. From civil disputes to criminal charges, our seasoned attorneys navigate complexities, ensuring fairness and safeguarding your interests.',
-		image: '/practice-civil.jpg',
+		image: '/practice-police.png',
 		icon: 'Gavel',
 	},
 	{

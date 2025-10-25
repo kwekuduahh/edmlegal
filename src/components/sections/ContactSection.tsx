@@ -12,14 +12,14 @@ export const ContactSection = () => {
             ref={ref}
             className="py-6 bg-[#eaa636]"
         >
-            <div className="container mx-auto px-4">
+            <div className="container px-4 mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                     transition={{ duration: 0.6 }}
-                    className=" flex flex-col md:flex-row md:text-left text-center items-center justify-between"
+                    className="flex flex-col items-center justify-between text-center  md:flex-row md:text-left"
                 >
-                    <h2 className="text-xl md:text-2xl font-bold mb-8 text-white m-0">
+                    <h2 className="m-0 mb-8 text-xl font-bold text-white md:text-2xl">
                         Contact Us Now! Get a Free Consultation for Your Case.
                     </h2>
                     <Link to="/contact">
