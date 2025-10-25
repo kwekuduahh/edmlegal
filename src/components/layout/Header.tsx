@@ -49,13 +49,13 @@ export const Header = () => {
                                 📞
                             </span>
                             <a
-                                href="tel:+16785610052"
+                                href="tel:+12148924354"
                                 className={cn(
                                     'text-sm transition-colors hover:text-[#eaa636]',
                                     isScrolled ? 'text-gray-700' : 'text-white'
                                 )}
                             >
-                                (678) 561-0052
+                                (214) 892-4354
                             </a>
                         </div>
                         <div className="flex items-center gap-2 text-sm">
@@ -68,13 +68,13 @@ export const Header = () => {
                                 Need Help?
                             </span>
                             <a
-                                href="tel:+16785610052"
+                                href="tel:+12148924354"
                                 className={cn(
                                     'font-semibold transition-colors hover:text-[#eaa636]',
                                     isScrolled ? 'text-gray-900' : 'text-white'
                                 )}
                             >
-                                (678) 561-0052
+                                (214) 892-4354
                             </a>
                         </div>
                     </div>

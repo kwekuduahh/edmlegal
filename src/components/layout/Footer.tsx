@@ -50,10 +50,10 @@ export const Footer = () => {
                             <p className="flex items-center gap-2">
                                 <span>📞</span>
                                 <a
-                                    href="tel:+12128924354"
+                                    href="tel:+12148924354"
                                     className="hover:text-[#eaa636] transition-colors"
                                 >
-                                    (212) 892-4354
+                                    (214) 892-4354
                                 </a>
                             </p>
                             <p className="flex items-center gap-2">
