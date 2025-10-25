@@ -74,9 +74,9 @@ export const Footer = () => {
                                     stancillegal@gmail.com
                                 </a>
                             </p>
-                            <button className="text-[#eaa636] hover:text-[#eaa636]/80 transition-colors text-sm font-semibold">
+                            {/* <button className="text-[#eaa636] hover:text-[#eaa636]/80 transition-colors text-sm font-semibold">
                                 📥 Download Brochure
-                            </button>
+                            </button> */}
                         </div>
                     </div>
 
