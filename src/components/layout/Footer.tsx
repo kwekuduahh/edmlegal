@@ -57,6 +57,15 @@ export const Footer = () => {
                                 </a>
                             </p>
                             <p className="flex items-center gap-2">
+                                <span>📞</span>
+                                <a
+                                    href="tel:+16785610052"
+                                    className="hover:text-[#eaa636] transition-colors"
+                                >
+                                    (678) 561-0052
+                                </a>
+                            </p>
+                            <p className="flex items-center gap-2">
                                 <span>✉️</span>
                                 <a
                                     href="mailto:brineyknightburg@gmail.com"

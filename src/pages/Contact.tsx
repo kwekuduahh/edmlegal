@@ -61,7 +61,8 @@ export default function Contact() {
                         transition={{ duration: 0.8 }}
                         className="max-w-4xl mx-auto text-center"
                     >
-                        <h1 className="mb-6 text-4xl font-bold md:text-5xl">Contact Us</h1>                        <hr className="w-40 mx-auto border-t-2 border-[#eaa636] mb-4" />
+                        <h1 className="mb-6 text-4xl font-bold md:text-5xl">Contact Us</h1>
+                        <hr className="w-40 mx-auto border-t-2 border-[#eaa636] mb-4" />
                         <p className="text-xl text-blue-100">
                             Get in touch with our legal experts today
                         </p>
@@ -90,8 +91,8 @@ export default function Contact() {
                                 <div className="mb-3 text-3xl">📞</div>
                                 <CardTitle className="mb-2 text-lg">Phone</CardTitle>
                                 <CardDescription>
-                                    <a href="tel:+16785610052" className="hover:text-primary">
-                                        (678) 561-0052
+                                    <a href="tel:+12148924354" className="hover:text-primary">
+                                        (214) 892-4354
                                     </a>
                                 </CardDescription>
                             </CardContent>
