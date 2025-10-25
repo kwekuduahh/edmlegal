@@ -37,7 +37,7 @@ export const Header = () => {
                     isScrolled ? 'border-gray-200 bg-white' : 'border-white/20 bg-black/30'
                 )}
             >
-                <div className="container mx-auto px-4">
+                <div className="container px-4 mx-auto">
                     <div className="flex items-center justify-between py-2">
                         <div className="flex items-center gap-2 text-sm">
                             <span
@@ -49,13 +49,13 @@ export const Header = () => {
                                 📞
                             </span>
                             <a
-                                href="tel:+18324297638"
+                                href="tel:+16785610052"
                                 className={cn(
                                     'text-sm transition-colors hover:text-[#eaa636]',
                                     isScrolled ? 'text-gray-700' : 'text-white'
                                 )}
                             >
-                                +18324297638
+                                (678) 561-0052
                             </a>
                         </div>
                         <div className="flex items-center gap-2 text-sm">
@@ -68,13 +68,13 @@ export const Header = () => {
                                 Need Help?
                             </span>
                             <a
-                                href="tel:+13324000265"
+                                href="tel:+16785610052"
                                 className={cn(
                                     'font-semibold transition-colors hover:text-[#eaa636]',
                                     isScrolled ? 'text-gray-900' : 'text-white'
                                 )}
                             >
-                                +13324000265
+                                (678) 561-0052
                             </a>
                         </div>
                     </div>
@@ -82,7 +82,7 @@ export const Header = () => {
             </div>
 
             {/* Main Header */}
-            <div className="container mx-auto px-4">
+            <div className="container px-4 mx-auto">
                 <div className="flex items-center justify-between py-4">
                     {/* Logo */}
                     <Link
@@ -93,17 +93,17 @@ export const Header = () => {
                         )}
                     >
                         <div className="flex items-center gap-2">
-                            <div className="w-10 h-10 flex items-center justify-center">
-                                <span className="text-white font-bold text-sm">
+                            <div className="flex items-center justify-center w-10 h-10">
+                                <span className="text-sm font-bold text-white">
                                     {isScrolled ? <Scale size={20} className='text-gray-900' /> : <Scale size={20} className='text-white' />}
                                 </span>
                             </div>
-                            <span className="hidden lg:inline">Flints Legal Solutions</span>
+                            <span className="hidden lg:inline">Stancil Legal Solutions</span>
                         </div>
                     </Link>
 
                     {/* Desktop Navigation */}
-                    <nav className="hidden md:flex items-center space-x-8">
+                    <nav className="items-center hidden space-x-8 md:flex">
                         {navLinks.map((link) => (
                             <Link
                                 key={link.path}
@@ -120,11 +120,11 @@ export const Header = () => {
 
                     {/* Mobile Menu Button */}
                     <button
-                        className="md:hidden p-2"
+                        className="p-2 md:hidden"
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                         aria-label="Toggle menu"
                     >
-                        <div className="w-6 h-5 flex flex-col justify-between">
+                        <div className="flex flex-col justify-between w-6 h-5">
                             <span
                                 className={cn(
                                     'w-full h-0.5 transition-all',
@@ -156,7 +156,7 @@ export const Header = () => {
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
-                        className="md:hidden pb-4 bg-white rounded-lg shadow-lg"
+                        className="pb-4 bg-white rounded-lg shadow-lg md:hidden"
                     >
                         {navLinks.map((link) => (
                             <Link

@@ -48,16 +48,16 @@ export default function Contact() {
     return (
         <div>
             {/* Hero Section */}
-            <section className="relative bg-cover bg-center bg-no-repeat text-white py-32 overflow-hidden" style={{ backgroundImage: 'url(/pexels-august-de-richelieu-4427627.jpg)' }}>
-                <div className="absolute inset-0 bg-orange-500/20 z-10"></div>
-                <div className="relative container mx-auto px-4 z-20">
+            <section className="relative py-32 overflow-hidden text-white bg-center bg-no-repeat bg-cover" style={{ backgroundImage: 'url(/pexels-august-de-richelieu-4427627.jpg)' }}>
+                <div className="absolute inset-0 z-10 bg-orange-500/20"></div>
+                <div className="container relative z-20 px-4 mx-auto">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
-                        className="text-center max-w-4xl mx-auto"
+                        className="max-w-4xl mx-auto text-center"
                     >
-                        <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>                        <hr className="w-40 mx-auto border-t-2 border-[#eaa636] mb-4" />
+                        <h1 className="mb-6 text-4xl font-bold md:text-5xl">Contact Us</h1>                        <hr className="w-40 mx-auto border-t-2 border-[#eaa636] mb-4" />
                         <p className="text-xl text-blue-100">
                             Get in touch with our legal experts today
                         </p>
@@ -68,12 +68,12 @@ export default function Contact() {
 
             {/* Contact Information */}
             <section className="py-12 bg-gray-50">
-                <div className="container mx-auto px-4">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                <div className="container px-4 mx-auto">
+                    <div className="grid max-w-5xl grid-cols-1 gap-6 mx-auto md:grid-cols-3">
                         <Card>
                             <CardContent className="p-6 text-center">
-                                <div className="text-3xl mb-3">📍</div>
-                                <CardTitle className="text-lg mb-2">Address</CardTitle>
+                                <div className="mb-3 text-3xl">📍</div>
+                                <CardTitle className="mb-2 text-lg">Address</CardTitle>
                                 <CardDescription>
                                     1440 New York Ave NW<br />
                                     Washington, DC 20005<br />
@@ -83,19 +83,19 @@ export default function Contact() {
                         </Card>
                         <Card>
                             <CardContent className="p-6 text-center">
-                                <div className="text-3xl mb-3">📞</div>
-                                <CardTitle className="text-lg mb-2">Phone</CardTitle>
+                                <div className="mb-3 text-3xl">📞</div>
+                                <CardTitle className="mb-2 text-lg">Phone</CardTitle>
                                 <CardDescription>
-                                    <a href="tel:+18324297638" className="hover:text-primary">
-                                        +1 832 429 7638
+                                    <a href="tel:+16785610052" className="hover:text-primary">
+                                        (678) 561-0052
                                     </a>
                                 </CardDescription>
                             </CardContent>
                         </Card>
                         <Card>
                             <CardContent className="p-6 text-center">
-                                <div className="text-3xl mb-3">✉️</div>
-                                <CardTitle className="text-lg mb-2">Email</CardTitle>
+                                <div className="mb-3 text-3xl">✉️</div>
+                                <CardTitle className="mb-2 text-lg">Email</CardTitle>
                                 <CardDescription>
                                     <a href="mailto:info@flintslegalsolutions.com" className="hover:text-primary">
                                         info@flintslegalsolutions.com
@@ -109,10 +109,10 @@ export default function Contact() {
 
             {/* Forms Section */}
             <section className="py-20 bg-white">
-                <div className="container mx-auto px-4">
+                <div className="container px-4 mx-auto">
                     <div className="max-w-3xl mx-auto">
                         <Tabs defaultValue="appointment" className="w-full">
-                            <TabsList className="grid w-full h-fit grid-cols-2 mb-8">
+                            <TabsList className="grid w-full grid-cols-2 mb-8 h-fit">
                                 <TabsTrigger value="appointment">Book Appointment</TabsTrigger>
                                 <TabsTrigger value="contact">Send Message</TabsTrigger>
                             </TabsList>
@@ -120,7 +120,7 @@ export default function Contact() {
                             <TabsContent value="appointment">
                                 <Card>
                                     <CardContent className="p-6">
-                                        <h3 className="text-2xl font-bold mb-6">Schedule a Consultation</h3>
+                                        <h3 className="mb-6 text-2xl font-bold">Schedule a Consultation</h3>
                                         <form onSubmit={handleAppointmentSubmit(onAppointmentSubmit)} className="space-y-4">
                                             <div>
                                                 <Label htmlFor="fullName">Full Name *</Label>
@@ -130,7 +130,7 @@ export default function Contact() {
                                                     placeholder="John Doe"
                                                 />
                                                 {appointmentErrors.fullName && (
-                                                    <p className="text-red-500 text-sm mt-1">{appointmentErrors.fullName.message}</p>
+                                                    <p className="mt-1 text-sm text-red-500">{appointmentErrors.fullName.message}</p>
                                                 )}
                                             </div>
 
@@ -143,7 +143,7 @@ export default function Contact() {
                                                     placeholder="john@example.com"
                                                 />
                                                 {appointmentErrors.email && (
-                                                    <p className="text-red-500 text-sm mt-1">{appointmentErrors.email.message}</p>
+                                                    <p className="mt-1 text-sm text-red-500">{appointmentErrors.email.message}</p>
                                                 )}
                                             </div>
 
@@ -156,7 +156,7 @@ export default function Contact() {
                                                     placeholder="+1234567890"
                                                 />
                                                 {appointmentErrors.phone && (
-                                                    <p className="text-red-500 text-sm mt-1">{appointmentErrors.phone.message}</p>
+                                                    <p className="mt-1 text-sm text-red-500">{appointmentErrors.phone.message}</p>
                                                 )}
                                             </div>
 
@@ -172,7 +172,7 @@ export default function Contact() {
                                                     <option value="corporate">Corporate & Investment</option>
                                                 </Select>
                                                 {appointmentErrors.caseType && (
-                                                    <p className="text-red-500 text-sm mt-1">{appointmentErrors.caseType.message}</p>
+                                                    <p className="mt-1 text-sm text-red-500">{appointmentErrors.caseType.message}</p>
                                                 )}
                                             </div>
 
@@ -184,7 +184,7 @@ export default function Contact() {
                                                     {...registerAppointment("preferredDate")}
                                                 />
                                                 {appointmentErrors.preferredDate && (
-                                                    <p className="text-red-500 text-sm mt-1">{appointmentErrors.preferredDate.message}</p>
+                                                    <p className="mt-1 text-sm text-red-500">{appointmentErrors.preferredDate.message}</p>
                                                 )}
                                             </div>
 
@@ -197,7 +197,7 @@ export default function Contact() {
                                                     rows={5}
                                                 />
                                                 {appointmentErrors.details && (
-                                                    <p className="text-red-500 text-sm mt-1">{appointmentErrors.details.message}</p>
+                                                    <p className="mt-1 text-sm text-red-500">{appointmentErrors.details.message}</p>
                                                 )}
                                             </div>
 
@@ -212,7 +212,7 @@ export default function Contact() {
                             <TabsContent value="contact">
                                 <Card>
                                     <CardContent className="p-6">
-                                        <h3 className="text-2xl font-bold mb-6">Get in Touch</h3>
+                                        <h3 className="mb-6 text-2xl font-bold">Get in Touch</h3>
                                         <form onSubmit={handleContactSubmit(onContactSubmit)} className="space-y-4">
                                             <div>
                                                 <Label htmlFor="contact-name">Name *</Label>
@@ -222,7 +222,7 @@ export default function Contact() {
                                                     placeholder="John Doe"
                                                 />
                                                 {contactErrors.name && (
-                                                    <p className="text-red-500 text-sm mt-1">{contactErrors.name.message}</p>
+                                                    <p className="mt-1 text-sm text-red-500">{contactErrors.name.message}</p>
                                                 )}
                                             </div>
 
@@ -235,7 +235,7 @@ export default function Contact() {
                                                     placeholder="john@example.com"
                                                 />
                                                 {contactErrors.email && (
-                                                    <p className="text-red-500 text-sm mt-1">{contactErrors.email.message}</p>
+                                                    <p className="mt-1 text-sm text-red-500">{contactErrors.email.message}</p>
                                                 )}
                                             </div>
 
@@ -248,7 +248,7 @@ export default function Contact() {
                                                     placeholder="+1234567890"
                                                 />
                                                 {contactErrors.phone && (
-                                                    <p className="text-red-500 text-sm mt-1">{contactErrors.phone.message}</p>
+                                                    <p className="mt-1 text-sm text-red-500">{contactErrors.phone.message}</p>
                                                 )}
                                             </div>
 
@@ -260,7 +260,7 @@ export default function Contact() {
                                                     placeholder="How can we help you?"
                                                 />
                                                 {contactErrors.subject && (
-                                                    <p className="text-red-500 text-sm mt-1">{contactErrors.subject.message}</p>
+                                                    <p className="mt-1 text-sm text-red-500">{contactErrors.subject.message}</p>
                                                 )}
                                             </div>
 
@@ -273,7 +273,7 @@ export default function Contact() {
                                                     rows={5}
                                                 />
                                                 {contactErrors.message && (
-                                                    <p className="text-red-500 text-sm mt-1">{contactErrors.message.message}</p>
+                                                    <p className="mt-1 text-sm text-red-500">{contactErrors.message.message}</p>
                                                 )}
                                             </div>
 

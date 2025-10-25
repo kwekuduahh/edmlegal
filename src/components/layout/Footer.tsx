@@ -29,18 +29,18 @@ export const Footer = () => {
 
     return (
         <footer className="bg-[#111111] text-white py-12">
-            <div className="container mx-auto px-4">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+            <div className="container px-4 mx-auto">
+                <div className="grid grid-cols-1 gap-8 mb-8 md:grid-cols-4">
                     {/* Logo and Contact Info */}
                     <div>
                         <div className="flex items-center gap-2 mb-4">
-                            <div className="w-fit flex items-center justify-center gap-2">
-                                <span className="text-white font-bold text-lg"><Scale size={20} />
-                                    <span className="text-white font-bold text-lg md:text-2xl">Flints Legal Solutions</span>
+                            <div className="flex items-center justify-center gap-2 w-fit">
+                                <span className="text-lg font-bold text-white"><Scale size={20} />
+                                    <span className="text-lg font-bold text-white md:text-2xl">Flints Legal Solutions</span>
                                 </span>
                             </div>
                         </div>
-                        <div className="space-y-3 text-gray-300 text-sm">
+                        <div className="space-y-3 text-sm text-gray-300">
                             <p className="flex items-start gap-2">
                                 <span>📍</span>
                                 <span>
@@ -50,10 +50,10 @@ export const Footer = () => {
                             <p className="flex items-center gap-2">
                                 <span>📞</span>
                                 <a
-                                    href="tel:+18324297638"
+                                    href="tel:+12128924354"
                                     className="hover:text-[#eaa636] transition-colors"
                                 >
-                                    +18324297638
+                                    (212) 892-4354
                                 </a>
                             </p>
                             <p className="flex items-center gap-2">
@@ -82,7 +82,7 @@ export const Footer = () => {
 
                     {/* Practice Areas */}
                     <div>
-                        <h3 className="text-lg font-semibold mb-4">Practice Areas</h3>
+                        <h3 className="mb-4 text-lg font-semibold">Practice Areas</h3>
                         <ul className="space-y-2 text-sm">
                             <li>
                                 <a
@@ -137,8 +137,8 @@ export const Footer = () => {
 
                     {/* Newsletter */}
                     <div>
-                        <h3 className="text-lg font-semibold mb-4">Newsletter</h3>
-                        <p className="text-gray-300 mb-4 text-sm">
+                        <h3 className="mb-4 text-lg font-semibold">Newsletter</h3>
+                        <p className="mb-4 text-sm text-gray-300">
                             Signup for our newsletter to get the latest news, updates and
                             special offers in your inbox.
                         </p>
@@ -153,7 +153,7 @@ export const Footer = () => {
                                         type="email"
                                         placeholder="Enter your email"
                                         {...register('email')}
-                                        className="bg-gray-800 border-gray-700 text-white placeholder:text-gray-500 text-sm"
+                                        className="text-sm text-white bg-gray-800 border-gray-700 placeholder:text-gray-500"
                                     />
                                     <Button
                                         type="submit"
@@ -164,20 +164,20 @@ export const Footer = () => {
                                     </Button>
                                 </div>
                                 {errors.email && (
-                                    <p className="text-red-400 text-sm mt-1">
+                                    <p className="mt-1 text-sm text-red-400">
                                         {errors.email.message}
                                     </p>
                                 )}
                             </div>
                         </form>
-                        <p className="text-xs text-gray-400 mt-3">
+                        <p className="mt-3 text-xs text-gray-400">
                             Your email is safe with us. We don't spam.
                         </p>
                     </div>
                 </div>
 
                 {/* Copyright */}
-                <div className="border-t border-gray-800 pt-6 text-center text-gray-400 text-sm">
+                <div className="pt-6 text-sm text-center text-gray-400 border-t border-gray-800">
                     <p>© Copyright 2025 - Flints Legal Solutions</p>
                 </div>
             </div>
